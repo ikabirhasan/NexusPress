@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <title>NexusPress - News & Insights</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="font-roboto bg-gray-100 text-gray-900">
+    <div class="flex flex-col min-h-screen">
+      <!-- Header -->
+      <header class="bg-gray-800 text-white py-4 shadow-md sticky top-0 z-50">
+        <div
+          class="container mx-auto px-6 flex flex-col sm:flex-row justify-between items-center"
+        >
+          <a href="#" class="text-3xl font-bold text-white mb-2 sm:mb-0"
+            >NexusPress</a
+          >
+          <nav class="flex space-x-6">
+            <a
+              href="#home"
+              class="text-lg text-white hover:text-blue-400 transition"
+              >Home</a
+            >
+            <a
+              href="#about"
+              class="text-lg text-white hover:text-blue-400 transition"
+              >About</a
+            >
+            <a
+              href="#blog"
+              class="text-lg text-white hover:text-blue-400 transition"
+              >News</a
+            >
+          </nav>
+          <button class="sm:hidden focus:outline-none mt-2" id="menu-toggle">
+            <svg
+              class="w-6 h-6 text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden sm:hidden bg-gray-800">
+          <a
+            href="#home"
+            class="block px-6 py-3 text-lg text-white hover:bg-blue-600 hover:text-white transition"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="block px-6 py-3 text-lg text-white hover:bg-blue-600 hover:text-white transition"
+            >About</a
+          >
+          <a
+            href="#blog"
+            class="block px-6 py-3 text-lg text-white hover:bg-blue-600 hover:text-white transition"
+            >News</a
+          >
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="flex-1">
+        <!-- Hero Section -->
+        <section id="home" class="bg-gray-200 py-16">
+          <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+              NexusPress: Your Source for News & Insights
+            </h1>
+            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-gray-700">
+              Stay informed with the latest stories on technology, culture, and
+              global trends.
+            </p>
+            <a
+              href="#blog"
+              class="bg-blue-600 text-white px-8 py-3 rounded-md font-medium hover:bg-blue-700 transition"
+              >Read the Latest News</a
+            >
+          </div>
+        </section>
+
+        <!-- News Section -->
+        <section id="blog" class="py-16 bg-white">
+          <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">
+              Top Stories
+            </h2>
+            <div
+              id="blog-posts"
+              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+            >
+              <!-- News posts will be dynamically inserted here -->
+            </div>
+          </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-16 bg-gray-100">
+          <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-10 text-gray-900">
+              About NexusPress
+            </h2>
+            <p class="text-lg text-center max-w-2xl mx-auto text-gray-700">
+              NexusPress is dedicated to delivering accurate and engaging news
+              on technology, innovation, and global trends. Our mission is to
+              inform and inspire with stories that shape the world.
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+          <p>&copy; 2025 NexusPress. All rights reserved.</p>
+          <div class="mt-4 space-x-4">
+            <a href="#" class="text-white hover:text-blue-400 transition"
+              >Privacy Policy</a
+            >
+            <a href="#" class="text-white hover:text-blue-400 transition"
+              >Terms of Service</a
+            >
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      // Mobile Menu Toggle
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Sample News Posts Data
+      const newsPosts = [
+        {
+          title: "The Future of AI in Everyday Life",
+          excerpt:
+            "Explore how artificial intelligence is shaping our daily routines and what to expect in the coming years.",
+          date: "August 25, 2025",
+          image:
+            "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEihgYpzkDw8Gm2GHplY5UKtwsQbpYYWuBw3dNPZ71ZHRA6CudAJrsvsl_MoGYVoP5EHSmam1cKeyV0gln-g3D7gGP6TgVd0TgliAOUJao5Eyc-Zr9pVMOWpIb7BG_NnkjjiZGY4dnUHFBRL9EchiT-SBMxBcTJxB8E5kv4RPQPsqSXyfWgPXUKtKB-uMAVN/w640-h360/Stageacademy%20acting%20school.png",
+          url: "/schauspielschule-performing-arts-schweiz.html",
+        },
+      ];
+
+      // Dynamically Render News Posts
+      const newsContainer = document.getElementById("blog-posts");
+      newsPosts.forEach((post) => {
+        const postElement = document.createElement("div");
+        postElement.className =
+          "bg-white rounded-md shadow-md overflow-hidden hover:shadow-lg transition";
+        postElement.innerHTML = `
+                <img src="${post.image}" alt="${post.title}" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">${post.title}</h3>
+                    <p class="text-gray-700 mb-4">${post.excerpt}</p>
+                    <p class="text-sm text-gray-500">${post.date}</p>
+                    <a href="${post.url}" class="text-blue-600 hover:text-blue-800 font-medium mt-4 block transition">Read More</a>
+                </div>
+            `;
+        newsContainer.appendChild(postElement);
+      });
+    </script>
+  </body>
+</html>
